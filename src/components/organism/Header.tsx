@@ -40,7 +40,7 @@ export const Header = () => {
             <a className="block" aria-label="トップに移動">
               <div className="flex items-center">
                 <Meh
-                  className="animate-bounce animate-spin text-blue-400"
+                  className="animate-bounce text-blue-400"
                   aria-hidden="true"
                 />
                 <p className="text-xl font-mono font-bold pl-3 tracking-widest">
