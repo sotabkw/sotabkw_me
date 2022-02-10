@@ -1,3 +1,4 @@
+import { Button } from '@components/uiParts/Button'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { Meh } from 'react-feather'
@@ -32,12 +33,16 @@ export const Header = () => {
 
   return (
     <header
-      className={`z-10 border-b-0.5 border-gray-400  sticky top-0  backdrop-blur transition-colors ${className}`}
+      className={`z-10 border-b-0.5 border-gray-200 dark:border-slate-600 sticky top-0  backdrop-blur transition-colors ${className}`}
     >
-      <div className="flex items-center justify-between px-4 py-4 sm:px-6 lg:px-14">
+      <div className="flex items-center justify-between px-4 py-4 sm:px-6  2xl:max-w-[70%] 2xl:mx-auto">
         <div className="">
           <Link href="/">
-            <a className="block" aria-label="トップに移動">
+            <Button
+              as="a"
+              className="block cursor-pointer"
+              aria-label="トップに移動"
+            >
               <div className="flex items-center">
                 <Meh
                   className="animate-bounce text-blue-400"
@@ -47,7 +52,7 @@ export const Header = () => {
                   sota_bkw
                 </p>
               </div>
-            </a>
+            </Button>
           </Link>
         </div>
 
