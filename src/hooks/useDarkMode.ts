@@ -1,28 +1,40 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useEffect } from 'react'
+import { useLocalStorage } from 'react-use'
+import { useSimpleDarkMode } from './useSimpleDarkMode'
 
-type UseSimpleDarkMode = (isDark?: boolean) => {
+const Theme = {
+  Dark: 'dark',
+  Light: 'light',
+} as const
+
+type UseDarkMode = () => {
   isDarkMode: boolean
-  toggle: (isDark?: boolean) => void
+  toggle: (isDark: boolean) => void
 }
 
-export const useSimpleDarkMode: UseSimpleDarkMode = (isInitialDark = true) => {
-  const [isDarkMode, toggleTheme] = useState<boolean>(isInitialDark)
-  const toggle = useCallback((isDark?) => {
-    if (typeof isDark === 'undefined') {
-      toggleTheme((state) => !state)
-      return
-    }
+export const useDarkMode: UseDarkMode = () => {
+  const [value, setValue] =
+    useLocalStorage<typeof Theme['Dark' | 'Light']>('theme')
+  const { isDarkMode, toggle } = useSimpleDarkMode()
 
-    toggleTheme(isDark)
-  }, [])
+  const persistToggle = (isDark: boolean) => {
+    toggle(isDark)
+    setValue(isDark ? Theme.Dark : Theme.Light)
+  }
 
   useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add('dark')
+    if (
+      value === Theme.Dark ||
+      (!('theme' in localStorage) &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      toggle(true)
+      setValue(Theme.Dark)
     } else {
-      document.documentElement.classList.remove('dark')
+      toggle(false)
+      setValue(Theme.Light)
     }
-  }, [isDarkMode])
+  }, [value, setValue, toggle])
 
-  return { isDarkMode, toggle }
+  return { isDarkMode, toggle: persistToggle }
 }
