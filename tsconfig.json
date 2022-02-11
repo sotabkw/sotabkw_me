@@ -11,12 +11,12 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": false,
+    "isolatedModules": true,
     "jsx": "preserve",
     "baseUrl": "./",
     "paths": {
       "@*": ["./src/*"],
-      "domain": ["./src/components"],
+      "components": ["./src/components"],
       "hooks": ["./src/hooks"]
     },
     "incremental": true

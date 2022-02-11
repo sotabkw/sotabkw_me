@@ -1,11 +1,11 @@
 import { Button } from '@components/uiParts/Button'
 import { Menu, Transition } from '@headlessui/react'
-import { useSimpleDarkMode } from '@hooks/useDarkMode'
+import { useDarkMode } from '@hooks/useDarkMode'
 import { Fragment } from 'react'
 import { Sun, Moon } from 'react-feather'
 
 export const DarkModeSelectMenu = () => {
-  const { isDarkMode, toggle } = useSimpleDarkMode()
+  const { isDarkMode, toggle } = useDarkMode()
 
   return (
     <div>
@@ -28,7 +28,7 @@ export const DarkModeSelectMenu = () => {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Items className="absolute right-0 w-28 mt-6 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+          <Menu.Items className="absolute right-0 w-28 mt-6 origin-top-right bg-white dark:bg-slate-800/75 divide-y divide-gray-200 dark:divide-gray-600 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
             <div className="px-1 py-1 ">
               <Menu.Item>
                 {({ active }) => (
