@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 
-import { Activity, Calendar, MapPin } from 'react-feather'
+import { Activity, Calendar, Circle, MapPin } from 'react-feather'
 
 type Props = {
   date: string
@@ -21,7 +21,7 @@ export const ResumeBar: React.VFC<Props> = (props) => {
   return (
     <li className="list-none">
       <article>
-        <div className="grid md:grid-cols-8 xl:grid-cols-5 items-start relative rounded-xl p-3 sm:p-5 xl:p-6 overflow-hidden">
+        <div className="grid md:grid-cols-5 items-start relative rounded-xl p-3 sm:p-5 xl:p-6 overflow-hidden">
           <h3 className="font-semibold text-gray-900 md:col-start-3 md:col-span-6 xl:col-start-3 xl:col-span-5 mb-1 ml-9 md:ml-0">
             <div className="flex text-xl font-sans text-gray-800">
               <a
@@ -44,19 +44,26 @@ export const ResumeBar: React.VFC<Props> = (props) => {
                 viewBox="0 0 12 12"
                 className={`w-3 h-3 mr-6 overflow-visible ${className}`}
               >
-                <circle cx="6" cy="6" r="6" fill="currentColor"></circle>
+                <circle
+                  cx="6"
+                  cy="6"
+                  r="6"
+                  fill="currentColor"
+                  className="animate-pulse"
+                ></circle>
                 <circle
                   cx="6"
                   cy="6"
                   r="11"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
+                  strokeWidth="2"
+                  className="animate-pulse"
                 ></circle>
                 <path
                   d="M 6 -6 V -30"
                   fill="none"
-                  stroke-width="2"
+                  strokeWidth="2"
                   stroke="currentColor"
                   className="text-gray-200"
                 ></path>
@@ -73,13 +80,13 @@ export const ResumeBar: React.VFC<Props> = (props) => {
                   r="11"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
+                  strokeWidth="2"
                 ></circle>
                 {!isFirst && (
                   <path
                     d="M 6 -6 V -30"
                     fill="none"
-                    stroke-width="2"
+                    strokeWidth="2"
                     stroke="currentColor"
                     className="text-gray-200"
                   ></path>
@@ -87,7 +94,7 @@ export const ResumeBar: React.VFC<Props> = (props) => {
                 <path
                   d="M 6 18 V 500"
                   fill="none"
-                  stroke-width="2"
+                  strokeWidth="2"
                   stroke="currentColor"
                   className="text-gray-200"
                 ></path>
