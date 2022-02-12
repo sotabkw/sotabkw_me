@@ -1,3 +1,6 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   darkMode: 'class',
   purge: [
@@ -20,7 +23,12 @@ module.exports = {
       6: '6px',
       8: '8px',
     },
-    extend: {},
+    extend: {
+      colors: {
+        primary: colors.teal,
+        gray: colors.neutral,
+      },
+    },
   },
   plugins: [],
 }
