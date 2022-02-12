@@ -28,7 +28,21 @@ module.exports = {
         primary: colors.teal,
         gray: colors.neutral,
       },
+      animation: {
+        fadeIn: 'fadeIn 0.5s ease-in forwards',
+        fadeInSlow: 'fadeIn 0.7s ease-in forwards',
+        fadeInFast: 'fadeIn 0.3s ease-in forwards',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { transform: 'translateY(15px)', opacity: 0 },
+          '100%': { transform: 'translateY(0)', opacity: 1 },
+        },
+      },
     },
+  },
+  variants: {
+    animation: ['motion-safe'],
   },
   plugins: [],
 }
