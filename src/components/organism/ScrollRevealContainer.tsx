@@ -10,7 +10,7 @@ type ScrollRevealContainerProps = {
 
 const ScrollRevealContainer: FC<ScrollRevealContainerProps> = ({
   children,
-  move = 'top',
+  move = 'bottom',
   delay = 200,
 }) => {
   const sectionRef = useRef<HTMLElement>(null)
