@@ -18,8 +18,6 @@ export const scrollFadeIn = (scrollSpeedType: scrollSpeedType) => {
       break
   }
 
-  console.log(className)
-
   const callback = (entries: IntersectionObserverEntry[]) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
