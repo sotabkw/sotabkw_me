@@ -1,8 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 import { Carrier } from '@components/organism/carrier'
 import { Introduce } from '@components/organism/Introduce'
 import { ScrollRevealContainer } from '@components/organism/ScrollRevealContainer'
 import { Skill } from '@components/organism/Skill'
-import Image from 'next/image'
 import { GitHub, Instagram, Mail, Twitter } from 'react-feather'
 
 export const AboutLayout = () => {
@@ -24,7 +24,7 @@ export const AboutLayout = () => {
         <ScrollRevealContainer scrollSpeedType="slow">
           <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
             <div className="flex flex-col items-center space-x-2 pt-8">
-              <Image
+              <img
                 src="/favicon.ico"
                 alt="avatar"
                 width="192px"
