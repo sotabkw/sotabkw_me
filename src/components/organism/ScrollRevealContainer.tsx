@@ -11,16 +11,17 @@ type ScrollRevealContainerProps = {
 const ScrollRevealContainer: FC<ScrollRevealContainerProps> = ({
   children,
   move = 'bottom',
-  delay = 200,
+  delay = 300,
 }) => {
   const sectionRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
     if (sectionRef.current)
       scrollReveal().reveal(sectionRef.current, {
-        reset: false,
+        reset: true,
         delay: delay,
         opacity: 0,
+        duration: 1000,
         origin:
           move === 'left'
             ? 'left'
@@ -29,11 +30,11 @@ const ScrollRevealContainer: FC<ScrollRevealContainerProps> = ({
             : move === 'top'
             ? 'top'
             : 'bottom',
-        distance: '40px',
+        distance: '20px',
       })
   }, [sectionRef, move, delay])
 
-  return <section ref={sectionRef}>{children}</section>
+  return sectionRef ? <section ref={sectionRef}>{children}</section> : <></>
 }
 
 export default ScrollRevealContainer
