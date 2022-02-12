@@ -1,14 +1,16 @@
 import { FC, useRef, useEffect } from 'react'
 import scrollReveal from 'scrollreveal'
 
+type move = 'left' | 'right' | 'top' | 'bottom'
+
 type ScrollRevealContainerProps = {
-  move?: string
+  move?: move
   delay?: number
 }
 
 const ScrollRevealContainer: FC<ScrollRevealContainerProps> = ({
   children,
-  move,
+  move = 'top',
   delay = 200,
 }) => {
   const sectionRef = useRef<HTMLElement>(null)
@@ -29,7 +31,7 @@ const ScrollRevealContainer: FC<ScrollRevealContainerProps> = ({
             : 'bottom',
         distance: '40px',
       })
-  }, [sectionRef])
+  }, [sectionRef, move, delay])
 
   return <section ref={sectionRef}>{children}</section>
 }
