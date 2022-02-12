@@ -5,8 +5,8 @@ import { SkillContents } from '@components/constant/SkillContent'
 
 export const Skill: React.VFC = () => {
   return (
-    <div className="p-4 rounded-3xl">
-      <h1 className="mb-4 text-4xl dark:text-white font-bold tracking-widest ml-4 flex">
+    <div>
+      <h1 className="mb-4 text-2xl dark:text-white font-bold tracking-widest flex">
         <div className="mr-2 flex items-center">
           <ChevronRight />
         </div>
