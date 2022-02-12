@@ -1,17 +1,10 @@
 import { Button } from '@components/uiParts/Button'
 import Link from 'next/link'
-import dynamic from 'next/dynamic'
-
-const ScrollRevealContainer = dynamic(
-  import('@components/organism/ScrollRevealContainer'),
-  {
-    ssr: false,
-  }
-)
+import { ScrollRevealContainer } from '@components/organism/ScrollRevealContainer'
 
 export default function FourZeroFour() {
   return (
-    <ScrollRevealContainer delay={100}>
+    <ScrollRevealContainer scrollSpeedType="normal">
       <div className="flex flex-col items-start justify-start md:mt-24 md:flex-row md:items-center md:justify-center md:space-x-6">
         <div className="space-x-2 pt-6 pb-8 md:space-y-5">
           <h1 className="text-6xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 md:border-r-2 md:px-6 md:text-8xl md:leading-14">

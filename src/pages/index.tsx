@@ -1,18 +1,10 @@
 import { BlogLayout } from '@components/layout/BlogLayout'
-
-import dynamic from 'next/dynamic'
-
-const ScrollRevealContainer = dynamic(
-  import('@components/organism/ScrollRevealContainer'),
-  {
-    ssr: false,
-  }
-)
+import { ScrollRevealContainer } from '@components/organism/ScrollRevealContainer'
 
 export default function Home() {
   return (
     <body>
-      <ScrollRevealContainer delay={200}>
+      <ScrollRevealContainer scrollSpeedType="normal">
         <BlogLayout />
       </ScrollRevealContainer>
     </body>
