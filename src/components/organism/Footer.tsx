@@ -35,11 +35,7 @@ export const Footer = () => {
                   aria-hidden="true"
                 />
               </Button>
-              <Button
-                as="a"
-                href="https://sotabkw.github.io/"
-                className="w-4 mx-2"
-              >
+              <Button as="a" href="/about" className="w-4 mx-2">
                 <User
                   className="cursor-pointer w-4 h-5  text-slate-500  hover:text-primary-400"
                   aria-hidden="true"
