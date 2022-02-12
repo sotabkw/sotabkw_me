@@ -11,11 +11,11 @@ export const DarkModeSelectMenu = () => {
     <div>
       <Menu as="div" className="relative inline-block text-left">
         <div>
-          <Menu.Button className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+          <Menu.Button className="inline-flex justify-center w-full py-2 text-sm font-medium text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
             {isDarkMode ? (
-              <Moon className="w-5 h-5  text-blue-400" aria-hidden="true" />
+              <Moon className="w-5 h-5  text-primary-400" aria-hidden="true" />
             ) : (
-              <Sun className="w-5 h-5  text-blue-400" aria-hidden="true" />
+              <Sun className="w-5 h-5  text-primary-400" aria-hidden="true" />
             )}
           </Menu.Button>
         </div>
@@ -34,7 +34,7 @@ export const DarkModeSelectMenu = () => {
                 {({ active }) => (
                   <Button
                     className={`${
-                      active ? 'bg-violet-500 text-white' : 'text-blue-400'
+                      active ? 'bg-violet-500 text-white' : 'text-primary-400'
                     } group flex rounded-md items-center w-full px-2 py-2 text-sm font-bold`}
                     onClick={() => toggle(false)}
                   >
@@ -54,7 +54,7 @@ export const DarkModeSelectMenu = () => {
                 {({ active }) => (
                   <Button
                     className={`${
-                      active ? 'bg-violet-500 text-white' : 'text-blue-400'
+                      active ? 'bg-violet-500 text-white' : 'text-primary-400'
                     } group flex rounded-md items-center w-full px-2 py-2 text-sm font-bold`}
                     onClick={() => toggle(true)}
                   >
