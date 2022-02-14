@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { Meh } from 'react-feather'
 import { DarkModeSelectMenu } from './DarkModeSelectMenu'
+import { PageMenu } from './PageMenu'
 
 export const Header = () => {
   const [isHeightOver, setIsHeightOver] = useState<boolean>(false) //1.
@@ -39,7 +40,7 @@ export const Header = () => {
       <SectionContainer>
         {
           <div className="flex items-center justify-between py-4">
-            <div className="">
+            <div>
               <Link href="/" passHref>
                 <Button
                   as="a"
@@ -59,7 +60,10 @@ export const Header = () => {
               </Link>
             </div>
 
-            <div className="text-sm">
+            <div className="text-sm flex items-center justify-between">
+              <div className='pr-4'>
+                <PageMenu />
+              </div>
               <DarkModeSelectMenu />
             </div>
           </div>
