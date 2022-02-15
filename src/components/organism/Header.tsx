@@ -61,7 +61,7 @@ export const Header = () => {
             </div>
 
             <div className="text-sm flex items-center justify-between">
-              <div className='pr-4'>
+              <div className="pr-4">
                 <PageMenu />
               </div>
               <DarkModeSelectMenu />
