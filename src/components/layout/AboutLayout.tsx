@@ -3,6 +3,7 @@ import { Carrier } from '@components/organism/carrier'
 import { Introduce } from '@components/organism/Introduce'
 import { ScrollRevealContainer } from '@components/organism/ScrollRevealContainer'
 import { Skill } from '@components/organism/Skill'
+import { Button } from '@components/uiParts/Button'
 import { GitHub, Instagram, Mail, Twitter } from 'react-feather'
 
 export const AboutLayout = () => {
@@ -38,26 +39,27 @@ export const AboutLayout = () => {
                 Software Engineer
               </div>
               <div className="flex space-x-3 pt-6">
-                <GitHub
-                  className="cursor-pointer w-6 h-6 text-slate-500  hover:text-primary-400"
-                  aria-hidden="true"
-                  aria-label="github icon"
-                />
-                <Twitter
-                  className="cursor-pointer w-6 h-6  text-slate-500  hover:text-primary-400"
-                  aria-hidden="true"
-                  aria-label="twitter icon"
-                />
-                <Mail
-                  className="cursor-pointer w-6 h-6  text-slate-500  hover:text-primary-400"
-                  aria-hidden="true"
-                  aria-label="mail icon"
-                />
-                <Instagram
-                  className="cursor-pointer w-6 h-6  text-slate-500  hover:text-primary-400"
-                  aria-hidden="true"
-                  aria-label="instagram icon"
-                />
+                <Button as="a" href="https://github.com/sotabkw" className="">
+                  <GitHub
+                    className="cursor-pointer w-6 h-6 text-slate-500  hover:text-primary-400"
+                    aria-hidden="true"
+                    aria-label="github icon"
+                  />
+                </Button>
+                <Button as="a" href="https://twitter.com/sota_bkw" className="">
+                  <Twitter
+                    className="cursor-pointer w-6 h-6  text-slate-500  hover:text-primary-400"
+                    aria-hidden="true"
+                    aria-label="twitter icon"
+                  />
+                </Button>
+                <Button as="a" href="mailto:stst819&#64;icloud.com">
+                  <Mail
+                    className="cursor-pointer w-6 h-6  text-slate-500  hover:text-primary-400"
+                    aria-hidden="true"
+                    aria-label="mail icon"
+                  />
+                </Button>
               </div>
             </div>
             <div className="prose max-w-none pb-8 dark:prose-dark xl:col-span-2">
