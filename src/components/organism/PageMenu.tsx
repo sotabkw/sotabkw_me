@@ -42,7 +42,7 @@ export const PageMenu = () => {
                   <Button
                     className={`${
                       active ? 'bg-violet-500 text-white' : 'text-primary-400'
-                    } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
+                    } group flex rounded-md items-center w-full px-2 py-2 text-sm font-bold`}
                     onClick={() => {
                       setCurrentPage('Blog')
                       router.push('/')
@@ -60,7 +60,7 @@ export const PageMenu = () => {
                   <button
                     className={`${
                       active ? 'bg-violet-500 text-white' : 'text-primary-400'
-                    } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
+                    } group flex rounded-md items-center w-full px-2 py-2 text-sm font-bold`}
                     onClick={() => {
                       setCurrentPage('About')
                       router.push('/about')
@@ -78,7 +78,7 @@ export const PageMenu = () => {
                   <button
                     className={`${
                       active ? 'bg-violet-500 text-white' : 'text-primary-400'
-                    } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
+                    } group flex rounded-md items-center w-full px-2 py-2 text-sm font-bold`}
                     onClick={() => {
                       setCurrentPage('Tags')
                       router.push('/tags')

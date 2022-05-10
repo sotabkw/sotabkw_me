@@ -8,7 +8,7 @@ export const Introduce: React.VFC = () => {
         <div className="mr-2 flex items-center">
           <ChevronRight />
         </div>
-        about me
+        About me
       </h1>
       <p className="text-lg font-sans text-gray-500 dark:text-gray-100">
         Hi, my name is Sota. Welcome to my site. I&apos;m a Software Engineer. I
