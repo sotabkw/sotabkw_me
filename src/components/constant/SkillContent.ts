@@ -8,12 +8,16 @@ export const SkillContents = [
     href: 'https://www.typescriptlang.org/',
   },
   {
-    name: 'Next.js',
-    href: 'https://nextjs.org/',
+    name: 'Go',
+    href: 'https://go.dev/',
   },
   {
     name: 'React.js',
     href: 'https://reactjs.org/',
+  },
+  {
+    name: 'Next.js',
+    href: 'https://nextjs.org/',
   },
   {
     name: 'HTML5',
@@ -26,10 +30,6 @@ export const SkillContents = [
   {
     name: 'Swift',
     href: 'https://docs.swift.org/swift-book/index.html',
-  },
-  {
-    name: 'Go',
-    href: 'https://go.dev/',
   },
   {
     name: 'Atomic Design',
