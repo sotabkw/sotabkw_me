@@ -1,0 +1,15 @@
+export const siteMetadata = {
+  title: 'sotabkw blog',
+  author: 'Sota Watanabe',
+  headerTitle: 'sotabkw blog',
+  description: 'A blog created with Next.js and Tailwind.css',
+  language: 'ja',
+  theme: 'system',
+  siteUrl: 'sotabkw-blog.pages.dev/',
+  siteRepo: 'https://github.com/sotabkw/sotabkw_blog',
+  siteLogo: '/static/images/logo.png',
+  image: '/static/images/avatar.png',
+  socialBanner: '/static/images/twitter-card.png',
+  email: 'stst819@icloud.com',
+  locale: 'ja',
+}

@@ -1,8 +1,6 @@
 import '../../styles/globals.css'
 import 'tailwindcss/tailwind.css'
 import { AppProps } from 'next/app'
-import { Header } from '@components/organism/Header'
-import { Footer } from '@components/organism/Footer'
 import { LayoutWrapper } from '@components/layout/LayoutWrapper'
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
