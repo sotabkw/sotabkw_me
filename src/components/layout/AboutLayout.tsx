@@ -62,7 +62,7 @@ export const AboutLayout = () => {
                 </Button>
               </div>
             </div>
-            <div className="prose max-w-none pb-8 dark:prose-dark xl:col-span-2">
+            <div className="pb-8  xl:col-span-2">
               <ul>
                 {Object.values(JSXArray).map((e, index) => (
                   <li key={index} className="my-8 list-none">
