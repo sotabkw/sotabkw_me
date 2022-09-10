@@ -16,7 +16,7 @@ export default function FourZeroFour() {
             Sorry we couldn&apos;t find this page.
           </p>
           <p className="mb-8">
-            But dont worry, you can find plenty of other things on our homepage.
+            But dont worry, you can find plenty of other things on my homepage.
           </p>
           <Link href="/" passHref>
             <Button

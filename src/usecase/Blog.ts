@@ -2,14 +2,14 @@ import { RestClientInterface } from '@lib/restClient.ts/restClient'
 
 export type Blog = {
   contents: Article[]
-  totalCount: string
+  totalCount: number
 }
 
 export type Article = {
   id: string
   leadSentence: string
   title: string
-  publishedAt: string
+  publishedAt: Date
   content: string
   eyecatch: string
   category: string[]

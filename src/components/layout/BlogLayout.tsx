@@ -1,6 +1,18 @@
 import { BlogSection } from '@components/organism/BlogSection'
+import { Article } from '@usecase/Blog'
+import { format } from 'date-fns'
 
-export const BlogLayout = () => {
+type Props = {
+  contents: Article[]
+  totalCount: number
+  currentPage: number
+}
+
+export const BlogLayout: React.FC<Props> = ({
+  contents,
+  totalCount,
+  currentPage,
+}) => {
   const blogContent = [
     {
       date: 'August 8, 2021',
@@ -45,16 +57,16 @@ export const BlogLayout = () => {
   ]
   return (
     <ul>
-      {blogContent.map((b, index) => {
-        const { date, tags, summary, title, slug } = b
+      {contents.map((b, index) => {
+        const { publishedAt, category, leadSentence, title, id } = b
         return (
           <li key={index}>
             <BlogSection
-              date={date}
-              tags={tags}
-              summary={summary}
+              date={format(new Date(publishedAt), 'yyyy/MM/dd')}
+              tags={category}
+              summary={leadSentence}
               title={title}
-              slug={slug}
+              slug={id}
             />
           </li>
         )
