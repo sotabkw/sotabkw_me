@@ -10,8 +10,10 @@ export const PageMenu = () => {
   const router = useRouter()
 
   useEffect(() => {
-    router.pathname === '/404' && setCurrentPage('Blog')
+    router.pathname === '/404' && setCurrentPage('Tags')
     router.pathname === '/about' && setCurrentPage('About')
+    router.pathname === '/tags' && setCurrentPage('Tags')
+    router.pathname === '/' && setCurrentPage('Blog')
   }, [router])
 
   return (
