@@ -30,7 +30,7 @@ export const CareerContents = [
   },
   {
     title: 'LabBase Inc',
-    date: '2021.10 - present',
+    date: '2022.10 - present',
     body: 'Web front-end internship in LabBase',
     isPresent: false,
     incHref: 'https://labbase.jp/',
