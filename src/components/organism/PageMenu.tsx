@@ -1,10 +1,11 @@
 import { Button } from '@components/uiParts/Button'
 import { Menu, Transition } from '@headlessui/react'
 import { useRouter } from 'next/router'
-import { Fragment, useEffect, useRef, useState } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import { ChevronDown, Edit3, Tag, User } from 'react-feather'
 
 type PageType = 'About' | 'Blog' | 'Tags'
+
 export const PageMenu = () => {
   const [currentPage, setCurrentPage] = useState<PageType>('Blog')
   const router = useRouter()
