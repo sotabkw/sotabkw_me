@@ -18,7 +18,11 @@ export default function BlogId({
 }) {
   return (
     <>
-      <PageSEO title={blog.title} description={blog.leadSentence} />
+      <PageSEO
+        title={blog.title}
+        description={blog.leadSentence}
+        ogImage={`https://og-image-generator.sotabkw.me/posts/${blog.id}/image`}
+      />
       {preview && (
         <Link href="/">
           <a href="/api/clear-preview" aria-label="プレビュー解除">
