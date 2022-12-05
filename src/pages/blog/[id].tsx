@@ -1,3 +1,5 @@
+import { PageSEO } from '@components/organism/SEO'
+import { siteMetadata } from '@data/siteMetadata'
 import { getClient } from '@lib/restClient.ts/restClient'
 import { Article, BlogUseCase } from '@usecase/Blog'
 import { format } from 'date-fns'
@@ -16,6 +18,7 @@ export default function BlogId({
 }) {
   return (
     <>
+      <PageSEO title={blog.title} description={blog.leadSentence} />
       {preview && (
         <Link href="/">
           <a href="/api/clear-preview" aria-label="プレビュー解除">
