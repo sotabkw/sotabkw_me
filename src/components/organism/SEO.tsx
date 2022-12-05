@@ -70,7 +70,7 @@ export const PageSEO: React.FC<PageSEOProps> = ({
       description={description}
       ogType="website"
       ogImage={ogImage || ogImageUrl}
-      twImage={twImageUrl}
+      twImage={ogImage || twImageUrl}
     />
   )
 }
