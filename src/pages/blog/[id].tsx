@@ -19,11 +19,7 @@ export default function BlogId({
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? ''
   return (
     <>
-      <PageSEO
-        title={blog.title}
-        description={blog.leadSentence}
-        ogImage={`${baseUrl}/api/ogp?id=${blog.title}`}
-      />
+      <PageSEO title={blog.title} description={blog.leadSentence} />
       {preview && (
         <Link href="/">
           <a href="/api/clear-preview" aria-label="プレビュー解除">
