@@ -5,8 +5,6 @@
   "scripts": {
     "dev": "next dev && ENV=development node api/serverless.js",
     "build": "next build && next export",
-    "now-build": "yum install libuuid-devel libmount-devel && cp /lib64/{libuuid,libmount,libblkid}.so.1 node_modules/canvas/build/Release/ && yarn build",
-    "deploy": "now",
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
