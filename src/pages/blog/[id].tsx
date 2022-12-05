@@ -16,12 +16,13 @@ export default function BlogId({
   blog: Article
   preview: boolean
 }) {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? ''
   return (
     <>
       <PageSEO
         title={blog.title}
         description={blog.leadSentence}
-        ogImage={`https://og-image-generator.sotabkw.me/posts/${blog.id}/image`}
+        ogImage={`${baseUrl}/api/ogp?id=${blog.title}`}
       />
       {preview && (
         <Link href="/">
