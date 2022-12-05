@@ -54,9 +54,14 @@ const CommonSEO: React.FC<Props> = ({
 type PageSEOProps = {
   title: string
   description: string
+  ogImage?: string
 }
 
-export const PageSEO: React.FC<PageSEOProps> = ({ title, description }) => {
+export const PageSEO: React.FC<PageSEOProps> = ({
+  title,
+  description,
+  ogImage,
+}) => {
   const ogImageUrl = siteMetadata.siteUrl + siteMetadata.socialBanner
   const twImageUrl = siteMetadata.siteUrl + siteMetadata.socialBanner
   return (
@@ -64,7 +69,7 @@ export const PageSEO: React.FC<PageSEOProps> = ({ title, description }) => {
       title={title}
       description={description}
       ogType="website"
-      ogImage={ogImageUrl}
+      ogImage={ogImage || ogImageUrl}
       twImage={twImageUrl}
     />
   )
