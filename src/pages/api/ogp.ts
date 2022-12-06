@@ -21,7 +21,7 @@ const createOgp = async (
   const canvas = createCanvas(WIDTH, HEIGHT)
   const ctx = canvas.getContext('2d')
 
-  ctx.font = '80px ipagp'
+  ctx.font = '100px ipagp'
   ctx.fillStyle = '#FFFFFF'
   ctx.textAlign = 'center'
   ctx.textBaseline = 'middle'

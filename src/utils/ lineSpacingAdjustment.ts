@@ -3,7 +3,7 @@ export const size = { width: 600, height: 315 }
 const getBase = (sum: number) => {
   switch (sum) {
     case 1:
-      return { rate: 2.6, additionalHeight: 120 }
+      return { rate: 2.6, additionalHeight: 180 }
     case 2:
       return { rate: 2.4, additionalHeight: 120 }
     case 3:
