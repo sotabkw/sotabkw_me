@@ -15,13 +15,13 @@ const createOgp = async (
   const HEIGHT = 630 as const
   const font = path.resolve(
     current,
-    'src/lib/canvas/assets/NotoSansJP-Bold.otf'
+    'src/lib/canvas/assets/NotoSansJP-Black.otf'
   )
   registerFont(font, { family: 'NotoSansJP' })
   const canvas = createCanvas(WIDTH, HEIGHT)
   const ctx = canvas.getContext('2d')
 
-  ctx.font = '100px ipagp'
+  ctx.font = '100px NotoSansJP'
   ctx.fillStyle = '#FFFFFF'
   ctx.textAlign = 'center'
   ctx.textBaseline = 'middle'
