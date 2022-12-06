@@ -5,6 +5,7 @@ import { siteMetadata } from '@data/siteMetadata'
 import { getClient } from '@lib/restClient.ts/restClient'
 import { Article, Blog, BlogUseCase } from '@usecase/Blog'
 import type { GetStaticProps } from 'next'
+import { HealthCheck } from './api/health_check'
 
 type Props = {
   contents: Article[]
@@ -30,17 +31,6 @@ export default function Home({ contents, totalCount }: Props) {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  if (typeof window === 'object') {
-    if (
-      localStorage.theme === 'dark' ||
-      (!('theme' in localStorage) &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches)
-    ) {
-      document.documentElement.classList.add('dark')
-    } else {
-      document.documentElement.classList.remove('dark')
-    }
-  }
   const blogUseCase = new BlogUseCase(getClient())
   const data: Blog = await blogUseCase.getList({
     offset: 0,
