@@ -6,8 +6,6 @@ import { getClient } from '@lib/restClient.ts/restClient'
 import { Article, Blog, BlogUseCase } from '@usecase/Blog'
 import type { GetStaticProps } from 'next'
 import { HealthCheck } from './api/health_check'
-import useSwr from 'swr'
-import { useState } from 'react'
 
 type Props = {
   contents: Article[]
@@ -16,17 +14,7 @@ type Props = {
 
 export const BLOG_PER_PAGE = 6
 
-const fetcher = async (args: string): Promise<HealthCheck> => {
-  const response = await fetch(args)
-  return (await response.json()) as HealthCheck
-}
-
 export default function Home({ contents, totalCount }: Props) {
-  const [hoge, setHoge] = useState('')
-  const { data, error } = useSwr<HealthCheck>('/api/health_check', fetcher)
-
-  fetcher('/api/health_check').then((s) => setHoge(s.name))
-
   return (
     <>
       <PageSEO
@@ -34,7 +22,6 @@ export default function Home({ contents, totalCount }: Props) {
         description={siteMetadata.description}
       />
       <body>
-        {data?.name}
         <ScrollRevealContainer scrollSpeedType="normal">
           <BlogLayout {...{ contents, totalCount, currentPage: 1 }} />
         </ScrollRevealContainer>
