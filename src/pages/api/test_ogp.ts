@@ -20,7 +20,7 @@ const createOgp = async (
   ctx.fillStyle = '#000000'
   ctx.textAlign = 'center'
   ctx.textBaseline = 'middle'
-  const text = '入力した文字は' + String(id) + 'なのねん'
+  const text = '入力した文字は' + String(id)
   ctx.fillText(text, WIDTH / 2, HEIGHT / 2)
   const buffer = canvas.toBuffer()
   res.writeHead(200, {
