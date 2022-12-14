@@ -31,7 +31,7 @@ export default function BlogId({
           </a>
         </Link>
       )}
-      <main className="max-w-3xl mx-auto px-4 sm:px-6 xl:max-w-5xl xl:px-0">
+      <main className="max-w-3xl mx-auto sm:px-6 xl:max-w-5xl xl:px-0">
         <div className="space-y-1 text-center py-10 border-b border-gray-200">
           <p className="text-base leading-6 font-medium text-gray-500 my-3 tracking-widest">
             {preview
