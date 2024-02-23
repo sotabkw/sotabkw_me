@@ -37,7 +37,7 @@
     "cypress": "9.4.1",
     "date-fns": "2.29.3",
     "dotenv": "^16.0.3",
-    "eslint": "8.8.0",
+    "eslint": "8.57.0",
     "eslint-config-next": "12.0.10",
     "isomorphic-unfetch": "^3.1.0",
     "postcss": "8.4.6",
