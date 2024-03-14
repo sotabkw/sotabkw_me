@@ -30,9 +30,16 @@ export const CareerContents = [
   },
   {
     title: 'LabBase Inc',
-    date: '2022.10 - present',
+    date: '2022.10 - 2023.3',
     body: 'Web front-end internship in LabBase',
     isPresent: false,
     incHref: 'https://labbase.jp/',
+  },
+  {
+    title: 'DeNA Inc',
+    date: '2023.4 - presetn',
+    body: 'software engineer in medical region',
+    isPresent: true,
+    incHref: 'https://dena.com/jp/services/#healthcare',
   },
 ]
