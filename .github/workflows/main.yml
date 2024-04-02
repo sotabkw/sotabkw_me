@@ -12,16 +12,17 @@ jobs:
           node-version: 14.x
       - uses: actions/cache@v2
         with:
-          path: ~/.cache/yarn
-          key: ${{ runner.os }}-yarn-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
-          restore-keys: ${{ runner.os }}-yarn-
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
       - name: Install dependencies
-        run: yarn install --frozen-lockfile --prefer-offline
+        run: npm ci
       - name: Run format
-        run: yarn format
+        run: npm run format
       - name: Check diff
         run: git diff --exit-code
       - name: Run lint
-        run: yarn lint
+        run: npm run lint
       - name: Run type-check
-        run: yarn typecheck
+        run: npm run typecheck
