@@ -1,7 +1,7 @@
+import { SkillContents } from '@components/constant/SkillContent'
+import Tag from '@components/uiParts/Tag'
 import React from 'react'
 import { ChevronRight } from 'react-feather'
-import Tag from '@components/uiParts/Tag'
-import { SkillContents } from '@components/constant/SkillContent'
 
 export const Skill: React.VFC = () => {
   return (
@@ -12,13 +12,13 @@ export const Skill: React.VFC = () => {
         </div>
         Skill
       </h1>
-      <ul className="mb-6 flex flex-wrap px-7 list-none">
+      <div className="mb-6 flex flex-wrap px-7 list-none">
         {SkillContents.map((s, i) => (
-          <li key={i} className="list-none my-2">
+          <div key={i} className="list-none my-2">
             <Tag text={s.name} url={s.href} />
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   )
 }

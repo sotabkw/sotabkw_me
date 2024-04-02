@@ -1,5 +1,4 @@
 import { SectionContainer } from '@components/layout/SectionContainer'
-import { Button } from '@components/uiParts/Button'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { Meh } from 'react-feather'
@@ -42,21 +41,15 @@ export const Header = () => {
           <div className="flex items-center justify-between py-4">
             <div>
               <Link href="/" passHref>
-                <Button
-                  as="a"
-                  className="block cursor-pointer"
-                  aria-label="トップに移動"
-                >
-                  <div className="flex items-center">
-                    <Meh
-                      className="animate-bounce text-primary-400"
-                      aria-hidden="true"
-                    />
-                    <p className="text-xl font-mono font-bold pl-3 tracking-widest">
-                      sota_bkw
-                    </p>
-                  </div>
-                </Button>
+                <div className="flex items-center">
+                  <Meh
+                    className="animate-bounce text-primary-400"
+                    aria-hidden="true"
+                  />
+                  <p className="text-xl font-mono font-bold pl-3 tracking-widest">
+                    sota_bkw
+                  </p>
+                </div>
               </Link>
             </div>
 
