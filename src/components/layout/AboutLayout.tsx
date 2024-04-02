@@ -4,7 +4,7 @@ import { Introduce } from '@components/organism/Introduce'
 import { ScrollRevealContainer } from '@components/organism/ScrollRevealContainer'
 import { Skill } from '@components/organism/Skill'
 import { Button } from '@components/uiParts/Button'
-import { GitHub, Instagram, Mail, Twitter } from 'react-feather'
+import { GitHub, Mail, Twitter } from 'react-feather'
 
 export const AboutLayout = () => {
   const JSXArray = {
@@ -63,13 +63,13 @@ export const AboutLayout = () => {
               </div>
             </div>
             <div className="pb-8  xl:col-span-2">
-              <ul>
+              <div>
                 {Object.values(JSXArray).map((e, index) => (
-                  <li key={index} className="my-8 list-none">
+                  <div key={index} className="my-8 list-none">
                     {e}
-                  </li>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
           </div>
         </ScrollRevealContainer>

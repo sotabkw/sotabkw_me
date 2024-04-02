@@ -1,11 +1,10 @@
 import { BlogLayout } from '@components/layout/BlogLayout'
-import { ScrollRevealContainer } from '@components/organism/ScrollRevealContainer'
 import { PageSEO } from '@components/organism/SEO'
+import { ScrollRevealContainer } from '@components/organism/ScrollRevealContainer'
 import { siteMetadata } from '@data/siteMetadata'
 import { getClient } from '@lib/restClient.ts/restClient'
 import { Article, Blog, BlogUseCase } from '@usecase/Blog'
 import type { GetStaticProps } from 'next'
-import { HealthCheck } from './api/health_check'
 
 type Props = {
   contents: Article[]
@@ -21,11 +20,11 @@ export default function Home({ contents, totalCount }: Props) {
         title={siteMetadata.title}
         description={siteMetadata.description}
       />
-      <body>
-        <ScrollRevealContainer scrollSpeedType="normal">
-          <BlogLayout {...{ contents, totalCount, currentPage: 1 }} />
-        </ScrollRevealContainer>
-      </body>
+      {/* <body> */}
+      <ScrollRevealContainer scrollSpeedType="normal">
+        <BlogLayout {...{ contents, totalCount, currentPage: 1 }} />
+      </ScrollRevealContainer>
+      {/* </body> */}
     </>
   )
 }

@@ -1,4 +1,3 @@
-import { Button } from '@components/uiParts/Button'
 import Tag from '@components/uiParts/Tag'
 import Link from 'next/link'
 import { FC } from 'react'
@@ -32,12 +31,7 @@ export const BlogSection: FC<Props> = ({
             <div>
               <h2 className="text-2xl font-bold leading-8 tracking-tight">
                 <Link href={`/blog/${slug}`} passHref>
-                  <Button
-                    as="a"
-                    className="text-gray-900 dark:text-gray-100 cursor-pointer"
-                  >
-                    {title}
-                  </Button>
+                  {title}
                 </Link>
               </h2>
               <div className="flex flex-wrap">
@@ -50,18 +44,13 @@ export const BlogSection: FC<Props> = ({
               {summary}
             </div>
           </div>
-          <div className="text-base font-medium leading-6">
+          <div className="text-base font-medium leading-6 text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 cursor-pointer">
             <Link
               href={`/blog/${slug}`}
               aria-label={`Read "${title}"`}
               passHref
             >
-              <Button
-                as="a"
-                className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 cursor-pointer"
-              >
-                Read more &rarr;
-              </Button>
+              Read more &rarr;
             </Link>
           </div>
         </div>

@@ -1,6 +1,6 @@
-import React, { FC } from 'react'
+import React from 'react'
 
-import { Activity, Calendar, Circle, MapPin } from 'react-feather'
+import { Activity, Calendar, MapPin } from 'react-feather'
 
 type Props = {
   date: string
@@ -19,7 +19,7 @@ export const ResumeBar: React.VFC<Props> = (props) => {
     ? 'text-primary-400'
     : 'dark:text-gray-100 text-gray-400'
   return (
-    <li className="list-none">
+    <>
       <article>
         <div className="grid md:grid-cols-5 items-start relative rounded-xl p-3 sm:p-5 xl:p-6 overflow-hidden">
           <h3 className="font-semibold text-gray-900 md:col-start-3 md:col-span-6 xl:col-start-3 xl:col-span-5 mb-1 ml-9 md:ml-0">
@@ -109,17 +109,17 @@ export const ResumeBar: React.VFC<Props> = (props) => {
             </div>
           </time>
           {body && (
-            <p className="font-sans md:col-start-3 md:col-span-6 xl:col-span-3 ml-9 md:ml-0  text-gray-500 dark:text-gray-100">
+            <div className="font-sans md:col-start-3 md:col-span-6 xl:col-span-3 ml-9 md:ml-0  text-gray-500 dark:text-gray-100">
               <div className="flex text-sm transition-colors pt-2">
                 <div className="mr-2">
                   <Activity />
                 </div>
                 {body}
               </div>
-            </p>
+            </div>
           )}
         </div>
       </article>
-    </li>
+    </>
   )
 }
