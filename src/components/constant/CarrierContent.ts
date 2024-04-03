@@ -37,7 +37,7 @@ export const CareerContents = [
   },
   {
     title: 'DeNA Inc',
-    date: '2023.4 - presetn',
+    date: '2023.4 - present',
     body: 'software engineer in medical region',
     isPresent: true,
     incHref: 'https://dena.com/jp/services/#healthcare',
