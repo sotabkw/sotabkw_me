@@ -14,7 +14,7 @@ type UseDarkMode = () => {
 
 export const useDarkMode: UseDarkMode = () => {
   const [value, setValue] =
-    useLocalStorage<typeof Theme['Dark' | 'Light']>('theme')
+    useLocalStorage<(typeof Theme)['Dark' | 'Light']>('theme')
   const { isDarkMode, toggle } = useSimpleDarkMode()
 
   const persistToggle = (isDark: boolean) => {
