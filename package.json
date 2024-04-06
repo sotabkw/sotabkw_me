@@ -30,7 +30,7 @@
     "axios": "^1.6.8",
     "date-fns": "^2.29.3",
     "dotenv": "^16.0.3",
-    "eslint": "^8",
+    "eslint": "^9.0.0",
     "eslint-config-next": "12.3.4",
     "isomorphic-unfetch": "^3.1.0",
     "postcss": "^8.4.38",
