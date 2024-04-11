@@ -28,7 +28,7 @@
     "@types/react": "17.0.80",
     "autoprefixer": "10.4.19",
     "axios": "^1.6.8",
-    "date-fns": "^2.29.3",
+    "date-fns": "^3.0.0",
     "dotenv": "^16.0.3",
     "eslint": "^8",
     "eslint-config-next": "12.3.4",
