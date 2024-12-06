@@ -1,6 +1,5 @@
-import { BlogLayout } from '@components/layout/BlogLayout'
+import { AboutLayout } from '@components/layout/AboutLayout'
 import { PageSEO } from '@components/organism/SEO'
-import { ScrollRevealContainer } from '@components/organism/ScrollRevealContainer'
 import { siteMetadata } from '@data/siteMetadata'
 import { getClient } from '@lib/restClient.ts/restClient'
 import { Article, Blog, BlogUseCase } from '@usecase/Blog'
@@ -21,9 +20,7 @@ export default function Home({ contents, totalCount }: Props) {
         description={siteMetadata.description}
       />
       {/* <body> */}
-      <ScrollRevealContainer scrollSpeedType="normal">
-        <BlogLayout {...{ contents, totalCount, currentPage: 1 }} />
-      </ScrollRevealContainer>
+      <AboutLayout />
       {/* </body> */}
     </>
   )

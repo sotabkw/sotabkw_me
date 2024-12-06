@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { Meh } from 'react-feather'
 import { DarkModeSelectMenu } from './DarkModeSelectMenu'
-import { PageMenu } from './PageMenu'
 
 export const Header = () => {
   const [isHeightOver, setIsHeightOver] = useState<boolean>(false) //1.
@@ -54,9 +53,6 @@ export const Header = () => {
             </div>
 
             <div className="text-sm flex items-center justify-between">
-              <div className="pr-4">
-                <PageMenu />
-              </div>
               <DarkModeSelectMenu />
             </div>
           </div>

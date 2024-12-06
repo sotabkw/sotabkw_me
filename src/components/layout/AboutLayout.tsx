@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import { Carrier } from '@components/organism/carrier'
-import { Introduce } from '@components/organism/Introduce'
 import { ScrollRevealContainer } from '@components/organism/ScrollRevealContainer'
 import { Skill } from '@components/organism/Skill'
 import { Button } from '@components/uiParts/Button'
@@ -8,7 +7,6 @@ import { GitHub, Mail, Twitter } from 'react-feather'
 
 export const AboutLayout = () => {
   const JSXArray = {
-    about: <Introduce />,
     carrier: <Carrier />,
     skill: <Skill />,
   }
