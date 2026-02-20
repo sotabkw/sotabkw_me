@@ -39,3 +39,6 @@ cypress/screenshots
 cypress/videos
 
 tsconfig.tsbuildinfo
+
+# progress tracking
+progress.md

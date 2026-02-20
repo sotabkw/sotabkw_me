@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-background: #ffffff;
+  --color-foreground: #111111;
+  --color-muted: #6b7280;
+  --color-border: #e5e7eb;
+  --color-card: rgba(255, 255, 255, 0.6);
+  --color-card-hover: rgba(255, 255, 255, 0.8);
+}
+
+:root {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+  --color-background: #0a0a0a;
+  --color-foreground: #ededed;
+  --color-muted: #9ca3af;
+  --color-border: #27272a;
+  --color-card: rgba(255, 255, 255, 0.05);
+  --color-card-hover: rgba(255, 255, 255, 0.1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: system-ui, -apple-system, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+::selection {
+  background-color: rgba(99, 102, 241, 0.3);
+}
